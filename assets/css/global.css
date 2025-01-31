@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Erica+One&family=Luckiest+Guy&display=swap');
+ 
+ /* Estilos gerais para dispositivos móveis */
+ body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+    transform: none !important;
+    background: url("../imagens/codigos.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.foto {
+    width: 50%;
+    height: 50%;
+    overflow: hidden;
+    object-fit: cover;
+    border-radius: 90%;
+    border: 2px solid gray;
+    margin-bottom: 16px;
+    box-shadow: 10px 10px 80px rgb(180, 158, 161);
+    
+}
+.codes img {
+    width: 10%;
+}
+.informations {
+    font-size: 80%;
+    align-items: center;
+}
+.informations img {
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+}
+.header h1 {
+    font-size: 24px;
+    margin-bottom: 25px;
+    font-family: "Luckiest Guy", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.info {
+    color: #fff;
+    background: linear-gradient(to left, transparent, #ffffff77);
+    gap: 1rem;
+    padding: 3%;
+    border: 1px solid #ffffff77;
+    border-image-slice: 1;
+    border-radius: 1rem;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+.info-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info h2 {
+    margin: 0;
+    font-size: 18px;
+    margin-left: 2rem;
+}
+/*info dentro do botão*/
+.info-content {
+    display: none;
+    max-height: 0;
+    opacity: 1;
+    overflow: hidden;
+}
+.info-content.open {
+    display: block;
+    padding: 10px;
+    max-height: 150px; /* Ajuste conforme o conteúdo */
+    opacity: 1;
+    transform: translateY(0);
+}
+/*Botão*/
+.toggle-button {
+    margin: 0 auto;
+    max-width: 30%;
+    padding: 5px 5px;
+    margin-top: -25px;
+    position: relative;
+    margin-inline-start: 13.5rem;
+    background-color: #b03232;
+    color: #ffffff;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 11px;
+}
+/*Botão ajustes*/
+.main {
+    margin-bottom: 1rem;
+}
+header {
+    width: 270px;
+    height: 450px;
+    color: #fff;
+    text-align: center;
+    padding: 2px;
+    margin-bottom: 5%;
+    margin: 1rem auto;
+    border-radius: 1rem;
+    background-color: #0000005b;
+}
+/* Ajustes para telas maiores (tablet) */
+@media screen and (min-width: 375px) {
+    .toggle-button {
+        right: -8px;
+        margin: 0 auto;
+        max-width: 30%;
+        padding: 5px 5px;
+        margin-top: -25px;
+        margin-inline-start: 16rem;
+        background-color: #b03232;
+        color: #ffffff;
+        border: none;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        font-size: 11px;
+    }
+    header {
+        width: 320px;
+        height: 450px;
+        color: #fff;
+        text-align: center;
+        padding: 2px;
+        margin-bottom: 5%;
+        margin: 1rem auto;
+        border-radius: 1rem;
+        background-color: #0000005b;
+    }
+}
+/* Ajustes para telas grandes (desktop) */
+@media screen and (min-width: 425px) {
+
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        height: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+        transform: none !important;
+        background: url("../imagens/codigos.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .foto {
+        width: 50%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid #1fc440;
+        margin-bottom: 16px;
+        box-shadow: 1px 1px 80px rgba(110, 236, 7, 0.12);
+    } 
+    .informations {
+        font-size: 80%;
+    }
+    .header h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+        font-family: "Luckiest Guy", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .info {
+        color: #fff;
+        gap: 1rem;
+        padding: 3%;
+        border-radius: 1rem;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .info h2 {
+        margin: 0;
+        font-size: 18px;
+        margin-left: 2rem;
+    }
+    /*info dentro do botão*/
+    .info-content {
+        display: none;
+        max-height: 0;
+        opacity: 1;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+    .info-content.open {
+        display: block;
+        padding: 10px;
+        max-height: 150px; /* Ajuste conforme o conteúdo */
+        opacity: 1;
+    }
+    /*Botão*/
+    .toggle-button {
+        margin: 0 auto;
+        max-width: 30%;
+        padding: 5px 5px;
+        margin-top: -25px;
+        position: relative;
+        margin-inline-start: 18rem;
+        background-color: #b03232;
+        color: #ffffff;
+        border: none;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        font-size: 11px;
+    }
+    /*Botão ajustes*/
+    .main {
+        margin-bottom: 1rem;
+    }
+     
+    header {
+        color: #ffffff;
+        text-align: center;
+        padding: 16px;
+        width: 330px;
+    }
+
+}
+@media screen and (min-width: 768px) {
+
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        height: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+        transform: none !important;
+        background: url("../imagens/codigos.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    .foto {
+        width: 20%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid #1fc440;
+        margin-bottom: 16px;
+        box-shadow: 1px 1px 80px rgba(110, 236, 7, 0.12);
+    } 
+    .codes img {
+        width: 6%;
+    }
+    .informations {
+        font-size: 110%;
+    }
+    .header h1 {
+        font-size: 24px;
+        margin-bottom: 25px;
+        font-family: "Luckiest Guy", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .info {
+        color: #fff;
+        gap: 1rem;
+        padding: 3%;
+        border-radius: 1rem;
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+    .info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .info h2 {
+        margin: 0 auto;
+        font-size: 18px;
+        margin-left: 1rem;
+        margin-bottom: -0.5rem;
+    }
+    /*info dentro do botão*/
+    .info-content {
+        display: none;
+        max-height: 0;
+        opacity: 1;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+    .info-content.open {
+        display: block;
+        padding: 10px;
+        max-height: 150px; /* Ajuste conforme o conteúdo */
+        opacity: 1;
+    }
+    /*Botão*/
+    .toggle-button {
+        margin: 0 auto;
+        max-width: 30%;
+        padding: 10px 10px;
+        margin-top: -25px;
+        position: relative;
+        margin-inline-start: 35rem;
+        background-color: #b03232;
+        color: #ffffff;
+        border: none;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        font-size: 11px;
+    }
+    /*Botão ajustes*/
+    .main {
+        margin-bottom: 1rem;
+    }
+    header {
+        color: #ffffff;
+        text-align: center;
+        padding: 16px;
+        width: 620px;
+    }
+
+}
+@media screen and (min-width: 1024px) {
+
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        height: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+        transform: none !important;
+        background: url("../imagens/codigos.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+    .foto {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 20%;
+        margin: 0 auto;
+        margin-top: 5rem;
+        height: auto;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid #1fc440;
+        margin-bottom: 16px;
+        box-shadow: 1px 1px 80px rgba(110, 236, 7, 0.12);
+    } 
+    .codes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr 1fr);
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 8%;
+    }
+    .codes img {
+        width: 63%;
+        
+    }
+    .informations {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        margin: 0 auto;
+        font-size: 80%;
+        text-align: left;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .header h1 {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: -1;
+        font-size: 24px;
+        margin-top: 6.5rem;
+        font-family: "Luckiest Guy", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .info {
+        color: #fff;
+        border-radius: 1rem;
+        width: 80%;
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .info-text {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr 1fr);
+        padding: 5%;
+    }
+    .info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .info h2 {
+        margin: 0 auto;
+        font-size: 18px;
+        margin-left: 1rem;
+        margin-bottom: -0.5rem;
+    }
+    /*info dentro do botão*/
+    .info-content {
+        display: none;
+        max-height: 0;
+        opacity: 1;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+    }
+    .info-content.open {
+        display: block;
+        padding: 10px;
+        max-height: 150px; /* Ajuste conforme o conteúdo */
+        opacity: 1;
+    }
+    /*Botão*/
+    .toggle-button {
+        margin: 0 auto;
+        max-width: 30%;
+        padding: 10px 10px;
+        margin-top: -20px;
+        position: relative;
+        margin-inline-start: 7.5rem;
+        background-color: #b03232;
+        color: #ffffff;
+        border: none;
+        border-radius: 0.3rem;
+        cursor: pointer;
+        font-size: 13px;
+    }
+    /*Botão ajustes*/
+    .main {
+        margin-bottom: 1rem;
+    }
+    header {
+        margin-top: 9rem;
+        color: #ffffff;
+        text-align: center;
+        padding: 16px;
+        width: 840px;
+        margin-bottom: 4rem;
+    }
+
+}
