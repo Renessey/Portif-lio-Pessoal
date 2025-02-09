@@ -1,10 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Erica+One&family=Luckiest+Guy&display=swap');
- 
  /* Estilos gerais para dispositivos móveis */
  body {
     font-family: Arial, sans-serif;
     font-size: 16px;
-    line-height: 1.5;
     margin: 0;
     padding: 0;
     height: auto !important;
@@ -16,8 +14,8 @@
     background-size: cover;
 }
 .foto {
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 20%;
     overflow: hidden;
     object-fit: cover;
     border-radius: 90%;
@@ -48,11 +46,10 @@
 .info {
     color: #fff;
     background: linear-gradient(to left, transparent, #ffffff77);
-    gap: 1rem;
+    background-color: #5b51db;
     padding: 3%;
-    border: 1px solid #ffffff77;
     border-image-slice: 1;
-    border-radius: 1rem;
+    border-radius: .5rem;
     width: 80%;
     margin: 0 auto;
     display: flex;
@@ -68,8 +65,8 @@
 }
 .info h2 {
     margin: 0;
-    font-size: 18px;
-    margin-left: 2rem;
+    font-size: 15px;
+    margin-left: 1rem;
 }
 /*info dentro do botão*/
 .info-content {
@@ -83,6 +80,8 @@
     padding: 10px;
     max-height: 150px; /* Ajuste conforme o conteúdo */
     opacity: 1;
+    font-size: 14px;
+    justify-content: center;
     transform: translateY(0);
 }
 /*Botão*/
@@ -90,19 +89,19 @@
     margin: 0 auto;
     max-width: 30%;
     padding: 5px 5px;
-    margin-top: -25px;
+    margin-top: -20px;
     position: relative;
-    margin-inline-start: 13.5rem;
+    margin-inline-start: 13.8rem;
     background-color: #b03232;
     color: #ffffff;
     border: none;
     border-radius: 0.3rem;
     cursor: pointer;
-    font-size: 11px;
+    font-size: 10px;
 }
 /*Botão ajustes*/
 .main {
-    margin-bottom: 1rem;
+    margin-bottom: .5rem;
 }
 header {
     width: 270px;
@@ -113,8 +112,144 @@ header {
     margin-bottom: 5%;
     margin: 1rem auto;
     border-radius: 1rem;
-    background-color: #0000005b;
+    background-color: #5b51db;
 }
+/*Footer*/
+ul {
+    list-style: none;
+  }
+  .example-2 {
+    position: fixed;
+    display: flex;
+    margin: auto;
+    margin-left: 17.5rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.4rem;
+    top: 3rem;
+    padding: 10px;    
+}
+  .example-2 .icon-content {
+    margin: 0 auto;
+    position: relative;
+    width: .8rem;
+    height: 1rem;
+  }
+  .example-2 .icon-content .tooltip {
+    position: absolute;
+    top: -30px;
+    transform: translateX(-50%);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .example-2 .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -50px;
+  }
+  .example-2 .icon-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #e5e8ef5d;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+  }
+  .example-2 .icon-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+  }
+  .example-2 .icon-content a:hover {
+    color: white;
+  }
+  .example-2 .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+  }
+  .example-2 .icon-content a:hover .filled {
+    height: 100%;
+  }
+  
+  .example-2 .icon-content a[data-social="whatsapp"] .filled,
+  .example-2 .icon-content a[data-social="whatsapp"] ~ .tooltip {
+    background-color: #128c7e;
+  }
+  
+  .example-2 .icon-content a[data-social="github"] .filled,
+  .example-2 .icon-content a[data-social="github"] ~ .tooltip {
+    background-color: #3b5998;
+  }
+  .example-2 .icon-content a[data-social="instagram"] .filled,
+  .example-2 .icon-content a[data-social="instagram"] ~ .tooltip {
+    background: linear-gradient(
+      45deg,
+      #405de6,
+      #5b51db,
+      #b33ab4,
+      #c135b4,
+      #e1306c,
+      #fd1f1f
+    );
+  }
+  @keyframes progress {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .skill-per .tooltip {
+    position: absolute;
+    right: -14px;
+    top: -28px;
+    font-size: 9px;
+    font-weight: 500;
+    color: #fff;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: #000000;
+  
+    z-index: 1;
+  }
+  
+  .tooltip::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -2px;
+    height: 10px;
+    width: 10px;
+    z-index: -1;
+    background: #000000;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  
+
 /* Ajustes para telas maiores (tablet) */
 @media screen and (min-width: 375px) {
     .toggle-button {
@@ -122,7 +257,7 @@ header {
         margin: 0 auto;
         max-width: 30%;
         padding: 5px 5px;
-        margin-top: -25px;
+        margin-top: -13px;
         margin-inline-start: 16rem;
         background-color: #b03232;
         color: #ffffff;
@@ -140,7 +275,22 @@ header {
         margin-bottom: 5%;
         margin: 1rem auto;
         border-radius: 1rem;
-        background-color: #0000005b;
+        background-color: #5b51db;
+    }
+    .example-2 {
+        position: fixed;
+        display: flex;
+        margin: auto;
+        margin-left: 21rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 0.4rem;
+        top: 3rem;
+        padding: 10px;    
+    }
+    .foto {
+        width: 100px;
+        height: 90px;
     }
 }
 /* Ajustes para telas grandes (desktop) */
@@ -161,8 +311,8 @@ header {
         background-size: cover;
     }
     .foto {
-        width: 50%;
-        height: auto;
+        width: 110px;
+        height: 100px;
         object-fit: cover;
         border-radius: 50%;
         border: 1px solid #1fc440;
@@ -240,6 +390,17 @@ header {
         padding: 16px;
         width: 330px;
     }
+    .example-2 {
+        position: fixed;
+        display: flex;
+        margin: auto;
+        margin-left: 24rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 0.4rem;
+        top: 3rem;
+        padding: 10px;    
+    }
 
 }
 @media screen and (min-width: 768px) {
@@ -259,8 +420,8 @@ header {
         background-size: cover;
     }
     .foto {
-        width: 20%;
-        height: auto;
+        width: 130px;
+        height: 120px;
         object-fit: cover;
         border-radius: 50%;
         border: 1px solid #1fc440;
@@ -304,7 +465,7 @@ header {
     }
     /*info dentro do botão*/
     .info-content {
-        display: none;
+        display: flex;
         max-height: 0;
         opacity: 1;
         overflow: hidden;
@@ -341,10 +502,32 @@ header {
         padding: 16px;
         width: 620px;
     }
-
+    .example-2 {
+        position: fixed;
+        display: flex;
+        margin: auto;
+        margin-left: 44rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 1.6rem;
+        top: 3rem;
+        padding: 10px;    
+    }
+    .example-2 .icon-content a {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: #4d4d4d;
+        background-color: #e5e8ef5d;
+        transition: all 0.3s ease-in-out;
+      }
 }
 @media screen and (min-width: 1024px) {
-
     body {
         font-family: Arial, sans-serif;
         font-size: 16px;
@@ -366,10 +549,10 @@ header {
         grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
-        width: 20%;
+        width: 140px;
         margin: 0 auto;
         margin-top: 5rem;
-        height: auto;
+        height: 130px;
         object-fit: cover;
         border-radius: 50%;
         border: 1px solid #1fc440;
@@ -395,35 +578,32 @@ header {
         grid-column-end: 2;
         grid-row-start: 2;
         margin: 0 auto;
-        font-size: 80%;
+        font-size: 17px;
+        line-height: 0.1px;
         text-align: left;
     }
     .header {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        margin-top: 15rem;
+        background-color: #5b51db;
     }
     .header h1 {
         display: grid;
         grid-column-start: 2;
         grid-column-end: -1;
-        font-size: 24px;
+        font-size: 34px;
         margin-top: 6.5rem;
         font-family: "Luckiest Guy", serif;
         font-weight: 400;
         font-style: normal;
     }
-    .info {
-        color: #fff;
-        border-radius: 1rem;
-        width: 80%;
-        display: grid;
-        grid-column-start: 1;
-        grid-column-end: 2;
-    }
     .info-text {
         display: grid;
-        grid-template-columns: repeat(2, 1fr 1fr);
-        padding: 5%;
+        grid-template-columns: repeat(1, 1fr 1fr);
+        margin: 0 auto;
+        gap: 1rem;
+        width: 95%;
     }
     .info-header {
         display: flex;
@@ -432,42 +612,39 @@ header {
     }
     .info h2 {
         margin: 0 auto;
-        font-size: 18px;
+        font-size: 22px;
         margin-left: 1rem;
         margin-bottom: -0.5rem;
     }
-    /*info dentro do botão*/
-    .info-content {
-        display: none;
-        max-height: 0;
-        opacity: 1;
-        overflow: hidden;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
-    }
     .info-content.open {
         display: block;
-        padding: 10px;
-        max-height: 150px; /* Ajuste conforme o conteúdo */
+        padding: 20px;
+        max-height: 940px; /* Ajuste conforme o conteúdo */
         opacity: 1;
+        font-size: 20px;
     }
-    /*Botão*/
     .toggle-button {
+        display: block;
         margin: 0 auto;
-        max-width: 30%;
-        padding: 10px 10px;
-        margin-top: -20px;
         position: relative;
-        margin-inline-start: 7.5rem;
-        background-color: #b03232;
-        color: #ffffff;
-        border: none;
-        border-radius: 0.3rem;
-        cursor: pointer;
-        font-size: 13px;
+        margin-right: 1rem;
+        margin-top: -35px;
+        padding: 10px;
+        font-size: 18px;
     }
     /*Botão ajustes*/
     .main {
-        margin-bottom: 1rem;
+        margin-top: 0rem;
+        margin: 0 auto;
+        padding: 10px;
+    }
+    .info {
+        display: block;
+        background-color: #5b51db;
+        position: relative;
+        margin: 0 auto;
+        border: none;
+        width: 50%;
     }
     header {
         margin-top: 9rem;
@@ -477,5 +654,647 @@ header {
         width: 840px;
         margin-bottom: 4rem;
     }
+    .example-2 {
+        position: fixed;
+        display: flex;
+        margin: auto;
+        margin-left: 60rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 2.5rem;
+        top: 3rem;
+        padding: 10px;    
+    }
+    .example-2 .icon-content a {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #4d4d4d;
+        background-color: #e5e8ef5d;
+        transition: all 0.3s ease-in-out;
+      }
+}
+@media screen and (min-width: 1280px) {
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        height: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+        transform: none !important;
+        background: url("../imagens/codigos.jpg");
+        background-attachment: fixed;
+        background-size: cover;
 
+    }
+    .foto {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 140px;
+        height: 130px;
+        margin: 0 auto;
+        margin-top: 5rem;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid #1fc440;
+        margin-bottom: 16px;
+        box-shadow: 1px 1px 80px rgba(110, 236, 7, 0.12);
+    } 
+    .codes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr 1fr);
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 8%;
+    }
+    .codes img {
+        width: 63%;
+        
+    }
+    .informations {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        margin: 0 auto;
+        font-size: 17px;
+        line-height: 0.1px;
+        text-align: left;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 1rem;
+        background-color: #5b51db;
+    }
+    .header h1 {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: -1;
+        font-size: 20px;
+        margin-top: 6.5rem;
+        font-family: "Luckiest Guy", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .info-text {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr 1fr);
+        margin: 0 auto;
+        width: 50%;
+        gap: .2rem;
+    }
+    .info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .info h2 {
+        margin: 0 auto;
+        font-size: 15px;
+        margin-left: 1rem;
+        margin-bottom: -0.5rem;
+    }
+    .info-content.open {
+        display: block;
+        padding: 20px;
+        max-height: 940px; /* Ajuste conforme o conteúdo */
+        opacity: 1;
+        font-size: 20px;
+    }
+    .toggle-button {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        margin-right: 2rem;
+        margin-top: -25px;
+        padding: 4px;
+        font-size: 13px;
+    }
+    /*Botão ajustes*/
+    .main {
+        margin-top: 0rem;
+        margin: 0 auto;
+        padding: 5px;
+    }
+    .info {
+        display: block;
+        background-color: #5b51db;
+        position: relative;
+        margin: 0 auto;
+        border: none;
+        width: 90%;
+        font-size: 12px;
+    }
+    header {
+        margin-top: 9rem;
+        color: #ffffff;
+        text-align: center;
+        padding: 16px;
+        width: 840px;
+        margin-bottom: 4rem;
+    }
+    .example-2 {
+        position: fixed;
+        display: flex;
+        margin: auto;
+        margin-left: 75rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 2.5rem;
+        top: 3rem;
+        padding: 10px;    
+    }
+    .example-2 .icon-content a {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #4d4d4d;
+        background-color: #e5e8ef5d;
+        transition: all 0.3s ease-in-out;
+      }
+}
+@media screen and (min-width: 1440px) {
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        height: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+        transform: none !important;
+        background: url("../imagens/codigos.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+    .foto {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 150px;
+        height: 140px;
+        margin: 0 auto;
+        margin-top: 5rem;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid #1fc440;
+        margin-bottom: 16px;
+        box-shadow: 1px 1px 80px rgba(110, 236, 7, 0.12);
+    } 
+    .codes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr 1fr);
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 8%;
+    }
+    .codes img {
+        width: 63%;
+        
+    }
+    .informations {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        margin: 0 auto;
+        font-size: 17px;
+        line-height: 0.1px;
+        text-align: left;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 15rem;
+        background-color: #5b51db;
+    }
+    .header h1 {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: -1;
+        font-size: 34px;
+        margin-top: 6.5rem;
+        font-family: "Luckiest Guy", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .info-text {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr 1fr);
+        margin: 0 auto;
+        width: 50%;
+        gap: .2rem;
+    }
+    .info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .info h2 {
+        margin: 0 auto;
+        font-size: 22px;
+        margin-left: 1rem;
+        margin-bottom: -0.5rem;
+    }
+    .info-content.open {
+        display: block;
+        padding: 20px;
+        max-height: 940px; /* Ajuste conforme o conteúdo */
+        opacity: 1;
+        font-size: 20px;
+    }
+    .toggle-button {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        margin-right: 2rem;
+        margin-top: -25px;
+        padding: 10px;
+        font-size: 18px;
+    }
+    /*Botão ajustes*/
+    .main {
+        margin-top: 0rem;
+        margin: 0 auto;
+        padding: 5px;
+    }
+    .info {
+        display: block;
+        background-color: #5b51db;
+        position: relative;
+        margin: 0 auto;
+        border: none;
+        width: 90%;
+    }
+    header {
+        margin-top: 9rem;
+        color: #ffffff;
+        text-align: center;
+        padding: 16px;
+        width: 840px;
+        margin-bottom: 4rem;
+    }
+    .example-2 {
+        position: fixed;
+        display: flex;
+        margin: auto;
+        margin-left: 85rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 2.5rem;
+        top: 3rem;
+        padding: 10px;    
+    }
+    .example-2 .icon-content a {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #4d4d4d;
+        background-color: #e5e8ef5d;
+        transition: all 0.3s ease-in-out;
+      }
+}
+@media screen and (min-width: 1920px) {
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+        height: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+        transform: none !important;
+        background: url("../imagens/codigos.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+    .foto {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 140px;
+        margin: 0 auto;
+        margin-top: 5rem;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid #1fc440;
+        margin-bottom: 16px;
+        box-shadow: 1px 1px 80px rgba(110, 236, 7, 0.12);
+    } 
+    .codes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr 1fr);
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 8%;
+    }
+    .codes img {
+        width: 63%;
+        
+    }
+    .informations {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        margin: 0 auto;
+        font-size: 17px;
+        line-height: 0.1px;
+        text-align: left;
+    }
+    .header {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 15rem;
+        background-color: #5b51db;
+    }
+    .header h1 {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: -1;
+        font-size: 34px;
+        margin-top: 6.5rem;
+        font-family: "Luckiest Guy", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .info-text {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr 1fr);
+        margin: 0 auto;
+        width: 50%;
+        gap: .2rem;
+    }
+    .info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .info h2 {
+        margin: 0 auto;
+        font-size: 22px;
+        margin-left: 1rem;
+        margin-bottom: -0.5rem;
+    }
+    .info-content.open {
+        display: block;
+        padding: 20px;
+        max-height: 940px; /* Ajuste conforme o conteúdo */
+        opacity: 1;
+        font-size: 20px;
+    }
+    .toggle-button {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        margin-right: 2rem;
+        margin-top: -25px;
+        padding: 10px;
+        font-size: 18px;
+    }
+    /*Botão ajustes*/
+    .main {
+        margin-top: 0rem;
+        margin: 0 auto;
+        padding: 5px;
+    }
+    .info {
+        display: block;
+        background-color: #5b51db;
+        position: relative;
+        margin: 0 auto;
+        border: none;
+        width: 90%;
+    }
+    header {
+        margin-top: 9rem;
+        color: #ffffff;
+        text-align: center;
+        padding: 16px;
+        width: 840px;
+        margin-bottom: 4rem;
+    }
+    .example-2 {
+        position: fixed;
+        display: flex;
+        margin: auto;
+        margin-left: 110rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 2.5rem;
+        top: 3rem;
+        padding: 10px;    
+    }
+    .example-2 .icon-content a {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #4d4d4d;
+        background-color: #e5e8ef5d;
+        transition: all 0.3s ease-in-out;
+      }
+}
+@media screen and (min-width: 2560px) {
+    body {
+        font-family: Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 200px;
+        height: auto !important;
+        max-width: none !important;
+        max-height: none !important;
+        transform: none !important;
+        background: url("../imagens/codigos.jpg");
+        background-attachment: fixed;
+        background-size: cover;
+
+    }
+    .foto{
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        width: 50%;
+        height: 70%;
+        margin: 0 auto;
+        margin-top: 5rem;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 1px solid #1fc440;
+        margin-bottom: 16px;
+        box-shadow: 1px 1px 80px rgba(110, 236, 7, 0.12);
+    } 
+    .codes {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr 1fr);
+        grid-column-start: 2;
+        grid-column-end: -1;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 8%;
+    }
+    .codes img {
+        width: 63%;
+    }
+    .informations {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        margin: 0 auto;
+        font-size: 32px;
+        line-height: 0.1px;
+        text-align: left;
+        margin-left: 4rem;
+    }
+    .informations img {
+        width: 8%;
+        height: 10%;
+    }
+    .header {
+        padding: 30px;
+        width: 1900px;
+        height: 900px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 15rem;
+        background-color: #5b51db;
+    }
+    .header h1 {
+        display: grid;
+        grid-column-start: 2;
+        grid-column-end: -1;
+        font-size: 54px;
+        margin-top: 9.5rem;
+        font-family: "Luckiest Guy", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    .info-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .info h2 {
+        margin: 0 auto;
+        font-size: 42px;
+        margin-left: 1rem;
+        margin-bottom: -0.5rem;
+    }
+    .info-content.open {
+        display: block;
+        padding: 20px;
+        max-height: 940px; /* Ajuste conforme o conteúdo */
+        opacity: 1;
+        font-size: 40px;
+    }
+    .toggle-button {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        margin-right: 2rem;
+        margin-top: -60px;
+        padding: 22px;
+        font-size: 28px;
+    }
+    /*Botão ajustes*/
+    .main {
+        margin-top: 0rem;
+        margin: 0 auto;
+        padding: 5px;
+    }
+    .info {
+        display: block;
+        background-color: #5b51db;
+        position: relative;
+        margin: 0 auto;
+        border: none;
+        width: 70%;
+        margin-top: 2%;
+    }
+    .info-text {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr 1fr);
+        margin: 0 auto;
+        margin-top: 8%;
+        width: 90%;
+        height: 40%;
+        gap: .2rem;
+    }
+    header {
+        margin-top: 9rem;
+        color: #ffffff;
+        text-align: center;
+        padding: 16px;
+        width: 840px;
+        margin-bottom: 4rem;
+    }
+    .example-2 {
+        position: fixed;
+        display: flex;
+        margin: auto;
+        margin-left: 85rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 2.5rem;
+        top: 3rem;
+        padding: 10px;    
+    }
+    .example-2 .icon-content a {
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        color: #4d4d4d;
+        background-color: #e5e8ef5d;
+        transition: all 0.3s ease-in-out;
+      }
 }

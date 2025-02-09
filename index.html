@@ -12,7 +12,7 @@
 <body class="body">
     <header class="header">
         <h1>Olá, eu sou o Renan Monteiro Silva</h1>
-        <img class="foto" src="./assets/imagens/pp.jpg" alt="Foto de Perfil" style="width: 100px; height: 100px;">
+        <img class="foto" src="./assets/imagens/pp.jpg" alt="Foto de Perfil">
 
         <div class="codes">
             <img src="./assets/imagens/icons/html.svg" alt="">
@@ -36,7 +36,7 @@
     </header>
 
     <div class="info-text">
-        <main class="main">
+        <main class="main" id="main">
             <section class="info">
                 <h2>Sobre mim</h2>
                 <button class="toggle-button" id="toggleButton" onclick="toggleCard()">Ver</button>
@@ -46,7 +46,7 @@
             </section>
         </main>
     
-        <main class="main">
+        <main class="main" id="main">
             <section class="info">
                 <h2>Sobre mim</h2>
                 <button class="toggle-button" id="toggleButton">Ver</button>
@@ -56,7 +56,7 @@
             </section>
         </main>
     
-        <main class="main">
+        <main class="main" id="main">
             <section class="info">
                 <h2>Sobre mim</h2>
                 <button class="toggle-button" id="toggleButton">Ver</button>
@@ -66,7 +66,7 @@
             </section>
         </main>
     
-        <main class="main">
+        <main class="main" id="main">
             <section class="info">
                 <h2>Sobre mim</h2>
                 <button class="toggle-button" id="toggleButton">Ver</button>
@@ -80,5 +80,34 @@
     <script src="./assets/js/index.js"></script>
     
 </body>
+<footer>
+    <ul class="example-2">
+        <li class="icon-content">
+            <a data-social="whatsapp" aria-label="Whatsapp"
+                href="https://wa.me/+5521993362569">
+                <div class="filled"></div>
+                <img src="./assets/imagens/icons/whatsapp.svg" alt="">
+            </a>
+            <div class="tooltip">Whatsapp</div>
+        </li>
+
+        <li class="icon-content">
+            <a data-social="instagram" aria-label="Instagram" href="https://www.instagram.com/re.mont9_/">
+                <div class="filled"></div>
+                <img src="./assets/imagens/icons/instagram.svg" alt="">
+            </a>
+            <div class="tooltip">Instagram</div>
+        </li>
+
+        <li class="icon-content">
+            <a data-social="github" aria-label="Instagram" href="https://github.com/Renessey">
+                <div class="filled"></div>
+                <img style="width: 20px; height: 20px;" src="./assets/imagens/icons/github.svg" alt="">
+            </a>
+            <div class="tooltip">github</div>
+        </li>
+    </ul>
+
+</footer>
 
 </html>
