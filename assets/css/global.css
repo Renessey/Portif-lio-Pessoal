@@ -28,7 +28,7 @@
     width: 10%;
 }
 .informations {
-    font-size: 80%;
+    font-size: 14px;
     align-items: center;
 }
 .informations img {
@@ -46,7 +46,6 @@
 .info {
     color: #fff;
     background: linear-gradient(to left, transparent, #ffffff77);
-    background-color: #5b51db;
     padding: 3%;
     border-image-slice: 1;
     border-radius: .5rem;
@@ -67,37 +66,42 @@
     margin: 0;
     font-size: 15px;
     margin-left: 1rem;
-}
-/*info dentro do botão*/
-.info-content {
-    display: none;
-    max-height: 0;
-    opacity: 1;
-    overflow: hidden;
-}
-.info-content.open {
-    display: block;
-    padding: 10px;
-    max-height: 150px; /* Ajuste conforme o conteúdo */
-    opacity: 1;
-    font-size: 14px;
-    justify-content: center;
-    transform: translateY(0);
-}
-/*Botão*/
-.toggle-button {
+}/*acordeon*/
+.accordion {
+    width: 270px;
     margin: 0 auto;
-    max-width: 30%;
-    padding: 5px 5px;
-    margin-top: -20px;
-    position: relative;
-    margin-inline-start: 13.8rem;
-    background-color: #b03232;
-    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+.accordion-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5b51db;
+    background: linear-gradient(to right, #51b9db 0%, #132ccd 60%, #5b51db 100%);
+    color: white;
+    border-radius: 5px;
     border: none;
-    border-radius: 0.3rem;
     cursor: pointer;
-    font-size: 10px;
+    text-align: left;
+    font-size: 16px;
+    transition: background 0.3s;
+    margin-top: 0.8rem;
+}
+.accordion-button:hover {
+    background-color: #0056b3;
+}
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    background-color: white;
+    padding: 0 10px;
+    transition: max-height 0.3s ease-out;
+    margin-top: -0.4rem;
+    border-radius: 5px;
+}
+.active + .accordion-content {
+    max-height: 100px;
+    padding: 10px;
 }
 /*Botão ajustes*/
 .main {
@@ -112,7 +116,7 @@ header {
     margin-bottom: 5%;
     margin: 1rem auto;
     border-radius: 1rem;
-    background-color: #5b51db;
+    background: linear-gradient(to top, #5b51db 0%, #128c7e 50%, #132ccd 100%);
 }
 /*Footer*/
 ul {
@@ -252,20 +256,6 @@ ul {
 
 /* Ajustes para telas maiores (tablet) */
 @media screen and (min-width: 375px) {
-    .toggle-button {
-        right: -8px;
-        margin: 0 auto;
-        max-width: 30%;
-        padding: 5px 5px;
-        margin-top: -13px;
-        margin-inline-start: 16rem;
-        background-color: #b03232;
-        color: #ffffff;
-        border: none;
-        border-radius: 0.3rem;
-        cursor: pointer;
-        font-size: 11px;
-    }
     header {
         width: 320px;
         height: 450px;
@@ -364,26 +354,6 @@ ul {
         max-height: 150px; /* Ajuste conforme o conteúdo */
         opacity: 1;
     }
-    /*Botão*/
-    .toggle-button {
-        margin: 0 auto;
-        max-width: 30%;
-        padding: 5px 5px;
-        margin-top: -25px;
-        position: relative;
-        margin-inline-start: 18rem;
-        background-color: #b03232;
-        color: #ffffff;
-        border: none;
-        border-radius: 0.3rem;
-        cursor: pointer;
-        font-size: 11px;
-    }
-    /*Botão ajustes*/
-    .main {
-        margin-bottom: 1rem;
-    }
-     
     header {
         color: #ffffff;
         text-align: center;
@@ -476,25 +446,6 @@ ul {
         padding: 10px;
         max-height: 150px; /* Ajuste conforme o conteúdo */
         opacity: 1;
-    }
-    /*Botão*/
-    .toggle-button {
-        margin: 0 auto;
-        max-width: 30%;
-        padding: 10px 10px;
-        margin-top: -25px;
-        position: relative;
-        margin-inline-start: 35rem;
-        background-color: #b03232;
-        color: #ffffff;
-        border: none;
-        border-radius: 0.3rem;
-        cursor: pointer;
-        font-size: 11px;
-    }
-    /*Botão ajustes*/
-    .main {
-        margin-bottom: 1rem;
     }
     header {
         color: #ffffff;
@@ -622,21 +573,6 @@ ul {
         max-height: 940px; /* Ajuste conforme o conteúdo */
         opacity: 1;
         font-size: 20px;
-    }
-    .toggle-button {
-        display: block;
-        margin: 0 auto;
-        position: relative;
-        margin-right: 1rem;
-        margin-top: -35px;
-        padding: 10px;
-        font-size: 18px;
-    }
-    /*Botão ajustes*/
-    .main {
-        margin-top: 0rem;
-        margin: 0 auto;
-        padding: 10px;
     }
     .info {
         display: block;
@@ -774,21 +710,6 @@ ul {
         max-height: 940px; /* Ajuste conforme o conteúdo */
         opacity: 1;
         font-size: 20px;
-    }
-    .toggle-button {
-        display: block;
-        margin: 0 auto;
-        position: relative;
-        margin-right: 2rem;
-        margin-top: -25px;
-        padding: 4px;
-        font-size: 13px;
-    }
-    /*Botão ajustes*/
-    .main {
-        margin-top: 0rem;
-        margin: 0 auto;
-        padding: 5px;
     }
     .info {
         display: block;
@@ -928,21 +849,6 @@ ul {
         opacity: 1;
         font-size: 20px;
     }
-    .toggle-button {
-        display: block;
-        margin: 0 auto;
-        position: relative;
-        margin-right: 2rem;
-        margin-top: -25px;
-        padding: 10px;
-        font-size: 18px;
-    }
-    /*Botão ajustes*/
-    .main {
-        margin-top: 0rem;
-        margin: 0 auto;
-        padding: 5px;
-    }
     .info {
         display: block;
         background-color: #5b51db;
@@ -1080,21 +986,6 @@ ul {
         opacity: 1;
         font-size: 20px;
     }
-    .toggle-button {
-        display: block;
-        margin: 0 auto;
-        position: relative;
-        margin-right: 2rem;
-        margin-top: -25px;
-        padding: 10px;
-        font-size: 18px;
-    }
-    /*Botão ajustes*/
-    .main {
-        margin-top: 0rem;
-        margin: 0 auto;
-        padding: 5px;
-    }
     .info {
         display: block;
         background-color: #5b51db;
@@ -1231,21 +1122,6 @@ ul {
         max-height: 940px; /* Ajuste conforme o conteúdo */
         opacity: 1;
         font-size: 40px;
-    }
-    .toggle-button {
-        display: block;
-        margin: 0 auto;
-        position: relative;
-        margin-right: 2rem;
-        margin-top: -60px;
-        padding: 22px;
-        font-size: 28px;
-    }
-    /*Botão ajustes*/
-    .main {
-        margin-top: 0rem;
-        margin: 0 auto;
-        padding: 5px;
     }
     .info {
         display: block;

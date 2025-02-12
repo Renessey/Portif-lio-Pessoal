@@ -1,9 +1,13 @@
-const toggleButtons = document.querySelectorAll('.toggle-button');
-const infoContents = document.querySelectorAll('.info-content');
-
-toggleButtons.forEach((button, index) => {
-    button.addEventListener('click', () => {
-        infoContents[index].classList.toggle('open');
-        button.textContent = infoContents[index].classList.contains('open') ? 'Fechar' : 'Ver';
+document.querySelectorAll(".accordion-button").forEach(button => {
+    button.addEventListener("click", function() {
+        this.classList.toggle("active");
+        let content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+            content.style.padding = "0 10px";
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            content.style.padding = "10px";
+        }
     });
 });
